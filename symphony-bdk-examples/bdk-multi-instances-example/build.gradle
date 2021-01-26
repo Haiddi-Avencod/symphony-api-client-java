@@ -3,7 +3,7 @@ plugins {
     id 'org.springframework.boot' version "2.4.1"
 }
 
-description = 'Symphony Java BDK Examples for the SpringBoot integration'
+description = 'How to run multiple bot instances in //'
 
 dependencies {
 
@@ -12,10 +12,11 @@ dependencies {
     implementation 'org.apache.commons:commons-lang3'
     implementation 'org.springframework.boot:spring-boot-starter'
 
+    compile 'org.springframework.kafka:spring-kafka:2.6.5'
+
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
-    testImplementation 'com.tngtech.archunit:archunit-junit5'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
